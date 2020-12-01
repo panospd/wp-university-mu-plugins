@@ -96,6 +96,21 @@
             ),
             'menu_icon' => 'dashicons-heart'
         ));
+
+        register_post_type('slide', array(
+            'show_in_rest' => true,
+            'supports' => array('title', "editor"),
+            'public' => true,
+            'show_ui' => true,
+            'labels' => array(
+                'name' => 'Slides',
+                'singular_name' => 'Slide',
+                'add_new_item' => 'Add New Slide',
+                'edit_item' => 'Edit Slide',
+                'all_items' => 'All Slides'
+            ),
+            'menu_icon' => 'dashicons-format-gallery'
+        ));
     }
     add_action('init', 'university_post_types');
 ?>
